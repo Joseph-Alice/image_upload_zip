@@ -16,6 +16,7 @@
 			$suffix=explode('.',$img['name']);
 			$count=count($suffix);
 			$newname = date('YmdHis',time()).'.'.$suffix[$count-1];
+			//保存图片
 			move_uploaded_file($img['tmp_name'],$dir.$newname);
 			//图片压缩---start
 			$source =  $dir.$newname;//原图片名称
